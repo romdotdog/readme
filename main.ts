@@ -22,7 +22,7 @@ async function queryRest(url: URL): Promise<any | null> {
 				return null;
 			}
 			return JSON.parse(j);
-		} catch (e) {
+		} catch {
 			return null;
 		}
 	}
