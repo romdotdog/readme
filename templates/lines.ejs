@@ -1,0 +1,55 @@
+<% 
+	let { data, cumulativeNormal, diffNormal } = it;
+	let l = data.length;
+	let height = 52 * l;
+	let startingYear = new Date().getFullYear() - l;
+%>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="<%= height + 40 %>">
+	<style>
+		@keyframes bar {
+			to {
+				transform: scaleX(1);
+			}
+		}
+
+		line.l,
+		line.r {
+			animation: bar 1s forwards ease-out calc(var(--i) * 5);
+			transform: scaleX(0);
+		}
+
+		text {
+			fill: #ccc;
+			font-size: 10px;
+			font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Segoe UI,
+				Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+				sans-serif;
+		}
+		
+		text.sub {
+			fill: #888;
+		}
+	</style>
+
+	<text class="sub" x="200" y="<%= height + 30 %>" dy="3">Cumulative total lines</text>
+	<text class="sub" x="670" y="<%= height + 30 %>" dy="3">Derivative graph</text>
+
+	<line stroke="#ddd" x1="40" x2="40" y1="10" y2="<%= height + 10 %>" />
+	<line stroke="#ddd" x1="846" x2="846" y1="10" y2="<%= height + 10 %>" />
+	
+	<g transform="translate(41, 10)">
+		<% for (let i = 0, y = 0, year = data[0]; i < l; year = data[++i], y += 52) { %>
+			<line stroke="#ddd" x1="-4" x2="0" y1="<%= y %>" y2="<%= y %>" />
+			<text x="-32" y="<%= y %>" dy="3"><%= i + startingYear %></text>
+			<% for (let j = 0, yw = y, lj = year.length, week = year[0]; j < lj; week = year[++j], ++yw) { %>
+				<% let x = 0, rx = 805; %>
+				<% for (let k = 0, lk = week.length, lang = week[0]; k < lk; lang = week[++k]) { %>
+					<line class="l" style="--i: <%= yw %>ms" stroke="<%= lang[0] %>" x1="<%= x %>" x2="<%= x += lang[1][0] / cumulativeNormal * 390 >> 0 %>" y1="<%= yw %>" y2="<%= yw %>" />
+					<% if (lang[1][1] != 0) { %>
+						<line class="r" style="--i: <%= yw %>ms" stroke="<%= lang[0] %>" x1="<%= rx %>" x2="<%= rx -= lang[1][1] / diffNormal * 390 >> 0 %>" y1="<%= yw %>" y2="<%= yw %>" />
+					<% } %>
+				<% } %>
+			<% } %>
+		<% } %>
+	</g>
+</svg>
