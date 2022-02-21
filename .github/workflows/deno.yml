@@ -19,18 +19,20 @@ jobs:
         uses: denoland/setup-deno@004814556e37c54a2f6e31384c9e18e983317366
         with:
           deno-version: v1.x
-      
+
       - name: Run linter
         run: deno lint
 
       - name: Run prog
         run: deno run --allow-read --allow-write --allow-env --allow-net main.ts
-        env: 
+        env:
           TOKEN: ${{ secrets.TOKEN }}
           EXCLUDED: ${{ secrets.EXCLUDED }}
-      
+
       - name: Commit and push
         run: |
+          git config --global user.name "actions-user"
+          git config --global user.email "actions@github.com"
           git add .
           # "echo" returns true so the build succeeds, even if no changed files
           git commit -m 'daily update' || echo
