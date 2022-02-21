@@ -202,4 +202,5 @@ async function lines() {
 
 const linesTemplate = await Deno.readTextFile("templates/lines.ejs");
 const processedLines = await eta.renderAsync(linesTemplate, await lines());
+await Deno.mkdir("generated", { recursive: true });
 await Deno.writeTextFile("generated/lines.svg", processedLines!);
