@@ -1,0 +1,37 @@
+name: Update
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@004814556e37c54a2f6e31384c9e18e983317366
+        with:
+          deno-version: v1.x
+      
+      - name: Run linter
+        run: deno lint
+
+      - name: Run prog
+        run: deno run --allow-read --allow-write --allow-env --allow-net main.ts
+        env: 
+          TOKEN: ${{ secrets.TOKEN }}
+          EXCLUDED: ${{ secrets.EXCLUDED }}
+      
+      - name: Commit and push
+        run: |
+          git add .
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m 'daily update' || echo
+          git push
