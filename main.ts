@@ -177,7 +177,7 @@ function lines() {
                     cumulativeCumulative += cumulative[name] = x;
                 }
 
-                weekData.push([langToColor[name], [cumulative[name], smoothed]]);
+                weekData.push([name, [cumulative[name], smoothed]]);
             }
 
             // adjust normals
@@ -189,10 +189,8 @@ function lines() {
                 diffNormal = cumulativeDiff;
             }
 
-            weekData.sort(
-                (a, b) => unprocessedCumulative[b[0]] - unprocessedCumulative[a[0]]
-            );
-            yearData.push(weekData);
+            weekData.sort((a, b) => unprocessedCumulative[b[0]] - unprocessedCumulative[a[0]]);
+            yearData.push(weekData.map(w => [langToColor[w[0]], w[1]]));
         }
         data.push(yearData);
     }

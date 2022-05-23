@@ -32,9 +32,9 @@
 			<% for (let j = 0, yw = y, lj = year.length, week = year[0]; j < lj; week = year[++j], ++yw) { %>
 				<% let x = 0, rx = 805; %>
 				<% for (let k = 0, lk = week.length, lang = week[0]; k < lk; lang = week[++k]) { %>
-					<line class="l" style="--i: <%= yw %>ms" stroke="<%= lang[0] %>" x1="<%= x %>" x2="<%= x += lang[1][0] / cumulativeNormal * 390 >> 0 %>" y1="<%= yw %>" y2="<%= yw %>" />
+					<line class="l" stroke="<%= lang[0] %>" x1="<%= x %>" x2="<%= x += lang[1][0] / cumulativeNormal * 390 >> 0 %>" y1="<%= yw %>" y2="<%= yw %>" />
 					<% if (lang[1][1] != 0) { %>
-						<line class="r" style="--i: <%= yw %>ms" stroke="<%= lang[0] %>" x1="<%= rx %>" x2="<%= rx -= lang[1][1] / diffNormal * 390 >> 0 %>" y1="<%= yw %>" y2="<%= yw %>" />
+						<line class="r" stroke="<%= lang[0] %>" x1="<%= rx %>" x2="<%= rx -= lang[1][1] / diffNormal * 390 >> 0 %>" y1="<%= yw %>" y2="<%= yw %>" />
 					<% } %>
 				<% } %>
 			<% } %>
