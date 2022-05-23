@@ -1,6 +1,6 @@
 import * as eta from "https://deno.land/x/eta@v1.12.3/mod.ts";
 import type { Contributor, Overview } from "./main.d.ts";
-import "https://deno.land/x/dotenv/load.ts";
+import "https://deno.land/x/dotenv@v3.2.0/load.ts";
 
 const GITHUB_API = "https://api.github.com/";
 const GITHUB_GRAPHQL = "https://api.github.com/graphql";
