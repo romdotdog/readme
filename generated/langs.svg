@@ -94,7 +94,7 @@
                                         class="progress-item"></span>
                                                             <span style="background-color: #f1e05a; width: 20.162352675628725%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #2b7489; width: 15.723547745511931%"
+                                                            <span style="background-color: #3178c6; width: 15.723547745511931%"
                                         class="progress-item"></span>
                                                             <span style="background-color: #563d7c; width: 8.424182579653296%"
                                         class="progress-item"></span>
@@ -153,7 +153,7 @@
                                 <span class="percent">249,769 LoC</span>
                             </li>
                                                     <li style="animation-delay: 300ms;">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#2b7489;"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#3178c6;"
                                     viewBox="0 0 16 16" version="1.1" width="16" height="16">
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
                                 </svg>
