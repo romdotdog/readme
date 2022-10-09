@@ -1,4 +1,4 @@
-import { Contributor, Overview } from "./main.d.ts";
+import { FetchedOverview, OverviewGQL } from "./types.ts";
 import * as eta from "https://deno.land/x/eta@v1.12.3/mod.ts";
 import "https://deno.land/x/dotenv@v3.2.0/load.ts";
 
@@ -53,13 +53,13 @@ function sleep(m: number) {
     return new Promise(r => setTimeout(r, m));
 }
 
-async function fetchOverview(): Promise<Overview | undefined> {
+async function fetchOverview(): Promise<FetchedOverview | undefined> {
     const r = await query<OverviewGQL>(await Deno.readTextFile("overview.gql", {}));
     return r?.data?.viewer;
 }
 
 /* start */
-const overview = await fetchOverview();
+const overview: FetchedOverview | undefined = await fetchOverview();
 if (overview === undefined) throw new Error("could not fetch overview");
 
 /* stats */
@@ -84,19 +84,21 @@ for (const repo of overview!.repositories.nodes) {
         unnormalizedRatio.push([node.name, size]);
         ratioSum += size;
     }
-
+    
     const normalizedRatio: [string, number][] = unnormalizedRatio.map(
         ([name, size]) => [name, size / ratioSum]
     );
 
     // get actual contributor data
-    const contributorData = await queryRest<Contributor[]>(
+    const contributorData = await queryRest<FetchedContributor[]>(
         new URL(`/repos/${repo.nameWithOwner}/stats/contributors`, GITHUB_API)
     );
 
     if (contributorData === null) {
         throw new Error(`attempt to get repo failed`);
     }
+
+    console.log("successfully fetched repo");
 
     for (const contributor of contributorData) {
         if (contributor.author.login != overview!.login) {
