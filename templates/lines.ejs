@@ -1,8 +1,8 @@
 <% 
 	let { data, cumulativeNormal, diffNormal } = it;
 	let l = data.length;
-	let height = 52 * l;
-	let startingYear = new Date().getFullYear() - l;
+	let height = data.reduce((a, y) => a + y.length, 0);
+	let startingYear = new Date().getFullYear() + 1 - l;
 %>
 <svg xmlns="http://www.w3.org/2000/svg" width="850" height="<%= height + 40 %>">
 	<style>
@@ -26,9 +26,9 @@
 	<line stroke="#ddd" x1="846" x2="846" y1="10" y2="<%= height + 10 %>" />
 	
 	<g transform="translate(41, 10)">
-		<% for (let i = 0, y = 0, year = data[0]; i < l; year = data[++i], y += 52) { %>
+		<% for (let i = 0, year = data[0], y = 0; i < l; year = data[++i], y += 52) { %>
 			<line stroke="#ddd" x1="-4" x2="0" y1="<%= y %>" y2="<%= y %>" />
-			<text x="-32" y="<%= y %>" dy="3"><%= i + startingYear %></text>
+			<text x="-32" y="<%= y %>" dy="3"><%= startingYear + i %></text>
 			<% for (let j = 0, yw = y, lj = year.length, week = year[0]; j < lj; week = year[++j], ++yw) { %>
 				<% let x = 0, rx = 805; %>
 				<% for (let k = 0, lk = week.length, lang = week[0]; k < lk; lang = week[++k]) { %>

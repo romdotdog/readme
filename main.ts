@@ -63,9 +63,11 @@ const overview: FetchedOverview | undefined = await fetchOverview();
 if (overview === undefined) throw new Error("could not fetch overview");
 
 /* stats */
-const WEEK = 60 * 60 * 24 * 7;
+const DAY = 60 * 60 * 24;
+const WEEK = DAY * 7;
+const YEAR = 31556926;
 const now = Date.now() / 1000;
-const currentWeek = now - (now % WEEK) + 259200;
+const currentWeek = now - (now % WEEK) - DAY * 4;
 
 const langToColor: Record<string, string> = {};
 const unprocessedWeeks: Record<string, number>[] = [];
@@ -149,15 +151,22 @@ function lines() {
     const data = [];
     const cumulative: Record<string, number> = {};
     const lastDiff: Record<string, number> = {};
+    
+    let week = unprocessedWeeks.length - 1;
+    week += (currentWeek - week * WEEK) % YEAR / WEEK >> 0;
+    week += 1; // should round up, not down ^
 
     let diffNormal = 0;
     let cumulativeNormal = 0;
-    for (let year = (unprocessedWeeks.length / 52) >> 0; year-- > 0;) {
+    while(week > 0) {
         const yearData = [];
-        const yearIndex = (year + 1) * 52;
-        for (let week = 0; week < 52; ++week) {
-            const w = unprocessedWeeks[yearIndex - week];
-            if (w === undefined) continue;
+        for (let weekOfYear = 51; weekOfYear >= 0; --weekOfYear, --week) {
+            //console.log(week);
+            const w = unprocessedWeeks[week];
+            if (w === undefined) {
+                yearData.push([]);
+                continue;
+            }
 
             let cumulativeDiff = 0;
             let cumulativeCumulative = 0;
