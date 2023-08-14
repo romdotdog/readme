@@ -92,9 +92,9 @@
                         <span class="progress">
                                                             <span style="background-color: #000080; width: 27.07224918851988%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #f1e05a; width: 19.440969627818546%"
+                                                            <span style="background-color: #f1e05a; width: 19.44100925086402%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #3178c6; width: 17.941711592449455%"
+                                                            <span style="background-color: #3178c6; width: 17.94167196940398%"
                                         class="progress-item"></span>
                                                             <span style="background-color: #563d7c; width: 8.127984811304454%"
                                         class="progress-item"></span>
@@ -154,7 +154,7 @@
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
                                 </svg>
                                 <span class="lang">JavaScript</span>
-                                <span class="percent">245,017 LoC</span>
+                                <span class="percent">245,018 LoC</span>
                             </li>
                                                     <li style="animation-delay: 300ms;">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#3178c6;"
@@ -162,7 +162,7 @@
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
                                 </svg>
                                 <span class="lang">TypeScript</span>
-                                <span class="percent">226,122 LoC</span>
+                                <span class="percent">226,121 LoC</span>
                             </li>
                                                     <li style="animation-delay: 450ms;">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#563d7c;"
