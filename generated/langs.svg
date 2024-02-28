@@ -90,55 +90,55 @@
                 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
                     <div>
                         <span class="progress">
-                                                            <span style="background-color: #000080; width: 22.28595982302692%"
+                                                            <span style="background-color: #000080; width: 22.273126412874724%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #DA5B0B; width: 16.11979474664755%"
+                                                            <span style="background-color: #DA5B0B; width: 16.11403935750076%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #f1e05a; width: 16.04795904306668%"
+                                                            <span style="background-color: #f1e05a; width: 16.04222930203981%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #3178c6; width: 15.339320138087022%"
+                                                            <span style="background-color: #3178c6; width: 15.333843408511406%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #563d7c; width: 6.695711348726002%"
+                                                            <span style="background-color: #563d7c; width: 6.69332072123774%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #dea584; width: 5.875186946569315%"
+                                                            <span style="background-color: #dea584; width: 5.913669601187571%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #178600; width: 5.028998416379447%"
+                                                            <span style="background-color: #178600; width: 5.027202869763641%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #a91e50; width: 4.110532266360795%"
+                                                            <span style="background-color: #a91e50; width: 4.1090646476246295%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #1d365d; width: 3.7000505350487836%"
+                                                            <span style="background-color: #1d365d; width: 3.6987294741403365%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #e34c26; width: 2.802649725584719%"
+                                                            <span style="background-color: #e34c26; width: 2.801649071415954%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #3572A5; width: 0.740981359786872%"
+                                                            <span style="background-color: #3572A5; width: 0.7407168008304389%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #a53b70; width: 0.3657279995633626%"
+                                                            <span style="background-color: #a53b70; width: 0.36559742054592187%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #89e051; width: 0.3459936190828936%"
+                                                            <span style="background-color: #89e051; width: 0.3458700860012741%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #5686a5; width: 0.25753814018965415%"
+                                                            <span style="background-color: #5686a5; width: 0.25744618912946843%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #c6538c; width: 0.06683344580195755%"
+                                                            <span style="background-color: #c6538c; width: 0.06680958368121367%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #555555; width: 0.04711194333103669%"
+                                                            <span style="background-color: #555555; width: 0.04709512254816736%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #5a6986; width: 0.04176992832715922%"
+                                                            <span style="background-color: #5a6986; width: 0.04175501484991372%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #6E4C13; width: 0.03537899955133515%"
+                                                            <span style="background-color: #6E4C13; width: 0.03536636788243104%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #4B6C4B; width: 0.034927483010167466%"
+                                                            <span style="background-color: #4B6C4B; width: 0.03491501255010264%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #b07219; width: 0.030306980381933125%"
+                                                            <span style="background-color: #b07219; width: 0.030296159619714776%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #384d54; width: 0.017618552372060663%"
+                                                            <span style="background-color: #384d54; width: 0.017612261868571136%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #C1F12E; width: 0.0055750324596223946%"
+                                                            <span style="background-color: #C1F12E; width: 0.005573041957769524%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #DBCA00; width: 0.002993405824913859%"
+                                                            <span style="background-color: #DBCA00; width: 0.002992337063452103%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #427819; width: 0.0007696736707554833%"
+                                                            <span style="background-color: #427819; width: 0.0007693988675361585%"
                                         class="progress-item"></span>
-                                                            <span style="background-color: #7e7eff; width: 0.0003104471490409181%"
+                                                            <span style="background-color: #7e7eff; width: 0.0003103363074216343%"
                                         class="progress-item"></span>
                                                     </span>
                     </div>
@@ -150,7 +150,7 @@
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
                                 </svg>
                                 <span class="lang">Lua</span>
-                                <span class="percent">341,933 LoC</span>
+                                <span class="percent">341,858 LoC</span>
                             </li>
                                                     <li style="animation-delay: 150ms;">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#DA5B0B;"
@@ -190,7 +190,7 @@
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
                                 </svg>
                                 <span class="lang">Rust</span>
-                                <span class="percent">90,142 LoC</span>
+                                <span class="percent">90,765 LoC</span>
                             </li>
                                                     <li style="animation-delay: 900ms;">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#178600;"
